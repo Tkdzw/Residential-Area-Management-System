@@ -1,0 +1,5 @@
+# Specify filepatterns you want git to ignore.
+
+# Ignore all files with following extensions
+*pyc
+

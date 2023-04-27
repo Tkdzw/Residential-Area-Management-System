@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>715</width>
+    <height>538</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton{
+	border-radius:10px;
+	border:2px solid rgb(51, 51, 51);
+	font: 10pt &quot;Comic Sans MS&quot;;
+}
+
+QLineEdit{
+	border-radius:10px;
+	border:2px solid rgb(51, 51, 51);
+}
+
+QPushButton:focus {
+	border:3px solid rgb(51, 51, 51);
+}
+
+QPushButton:hover {
+	border:3px solid rgb(51, 51, 51);
+}
+
+QPushButton:pressed{
+	border-radius:10px;
+	border:2px solid rgb(51, 51, 51);
+	background-color: rgb(73, 161, 255);
+}
+
+QDialog{
+	
+	background-color: qlineargradient(spread:pad, x1:0.54, y1:0, x2:0.517045, y2:1, stop:0 rgba(140, 140, 140, 75), stop:1 rgba(255, 255, 255, 255));
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QWidget" name="District" native="true">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>126</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget#bgwidget{
+background-color:qlineargradient(spread:pad, x1:0.904, y1:0.908682, x2:0.466, y2:0.153, stop:0 rgba(0, 104, 255, 255), stop:0.897727 rgba(23, 115, 155, 200));}
+</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="DialogTitle">
+        <property name="font">
+         <font>
+          <family>Times New Roman</family>
+          <pointsize>34</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Residential Area
+Management</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <widget class="QComboBox" name="cmbCouncil">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>140</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>90</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Georgia</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Select Your Coucil</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnSubmit">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>210</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Submit</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
