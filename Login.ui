@@ -88,7 +88,7 @@ QPushButton:pressed{
 </string>
     </property>
     <property name="text">
-     <string>Sign in or create a new account</string>
+     <string>Enter Authentcation Details</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btnLogin">
@@ -196,7 +196,10 @@ border:3px solid rgb(51, 51, 51);
      <string/>
     </property>
     <property name="text">
-     <string>Tkdzw</string>
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLineEdit" name="txtPassword">
@@ -229,10 +232,13 @@ border:3px solid rgb(51, 51, 51);
      <string/>
     </property>
     <property name="text">
-     <string>1234</string>
+     <string/>
     </property>
     <property name="echoMode">
      <enum>QLineEdit::Password</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="lblError">
@@ -299,7 +305,7 @@ border:3px solid rgb(51, 51, 51);
       <x>0</x>
       <y>7</y>
       <width>653</width>
-      <height>131</height>
+      <height>141</height>
      </rect>
     </property>
     <property name="font">
@@ -329,5 +335,38 @@ Management</string>
   <tabstop>btnLogin</tabstop>
  </tabstops>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>txtUsername</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnLogin</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>399</x>
+     <y>277</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>432</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>txtPassword</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnLogin</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>426</x>
+     <y>351</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>266</x>
+     <y>419</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

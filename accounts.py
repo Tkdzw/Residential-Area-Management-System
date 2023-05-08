@@ -24,12 +24,7 @@ def AccNav(ui):
 	ui.accountstacked.setCurrentIndex(1)
 
 def AddAcc(ui):
-	conn = mysql.connector.connect(
-		host = "localhost",
-		user = "root",
-		password = "1234",
-		database = "shurugwi"
-		)
+	conn = databaseConnection()
 	c = conn.cursor()
 	#AccNumber = 123332
 	F_Name = ui.txtFirstname.text()
@@ -56,12 +51,7 @@ def AddAcc(ui):
 		Error_Message(e)
 
 def loadData(ui):
-	conn = mysql.connector.connect(
-		host = "localhost",
-		user = "root",
-		password = "1234",
-		database = "shurugwi"
-		)
+	conn = databaseConnection()
 	c = conn.cursor()
 
 	user=""
@@ -82,12 +72,7 @@ def AccSearch(ui):
 	search = ui.txtSearch.text()
 	
 	ui.accounts_table.setRowCount(0)
-	conn = mysql.connector.connect(
-		host = "localhost",
-		user = "root",
-		password = "1234",
-		database = "shurugwi"
-		)
+	conn = databaseConnection()
 	c = conn.cursor()
 	query = "SELECT * FROM residents WHERE AccNumber = '%s'" % (search)
 	c.execute(query)
@@ -105,12 +90,7 @@ def DetailsView(ui):
 	search = ui.txtSearch.text()
 	
 	ui.accounts_table.setRowCount(0)
-	conn = mysql.connector.connect(
-		host = "localhost",
-		user = "root",
-		password = "1234",
-		database = "shurugwi"
-		)
+	conn = databaseConnection()
 	c = conn.cursor()
 	query = "SELECT * FROM residents WHERE AccNumber = '%s'" % (search)
 	c.execute(query)

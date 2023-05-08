@@ -364,7 +364,7 @@ QPushButton:selected {
           <enum>QFrame::Plain</enum>
          </property>
          <property name="currentIndex">
-          <number>2</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="Home">
           <layout class="QGridLayout" name="gridLayout">
@@ -524,7 +524,7 @@ QCommandLinkButton:hover {
                      </rect>
                     </property>
                     <property name="text">
-                     <string>View Accounts*</string>
+                     <string>View Accounts</string>
                     </property>
                    </widget>
                    <widget class="QCommandLinkButton" name="cmbSearch">
@@ -2672,7 +2672,7 @@ QPushButton:pressed {
                         <property name="geometry">
                          <rect>
                           <x>0</x>
-                          <y>-775</y>
+                          <y>0</y>
                           <width>846</width>
                           <height>1136</height>
                          </rect>
@@ -5475,12 +5475,12 @@ border-radius: 10px;</string>
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>828</x>
-     <y>197</y>
+     <x>487</x>
+     <y>44</y>
     </hint>
     <hint type="destinationlabel">
-     <x>772</x>
-     <y>229</y>
+     <x>431</x>
+     <y>76</y>
     </hint>
    </hints>
   </connection>
@@ -5575,8 +5575,8 @@ border-radius: 10px;</string>
      <y>459</y>
     </hint>
     <hint type="destinationlabel">
-     <x>206</x>
-     <y>97</y>
+     <x>223</x>
+     <y>29</y>
     </hint>
    </hints>
   </connection>
@@ -5591,8 +5591,8 @@ border-radius: 10px;</string>
      <y>499</y>
     </hint>
     <hint type="destinationlabel">
-     <x>291</x>
-     <y>97</y>
+     <x>223</x>
+     <y>29</y>
     </hint>
    </hints>
   </connection>
@@ -5607,8 +5607,8 @@ border-radius: 10px;</string>
      <y>539</y>
     </hint>
     <hint type="destinationlabel">
-     <x>406</x>
-     <y>97</y>
+     <x>243</x>
+     <y>29</y>
     </hint>
    </hints>
   </connection>
@@ -5635,12 +5635,28 @@ border-radius: 10px;</string>
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>184</x>
-     <y>36</y>
+     <x>188</x>
+     <y>29</y>
     </hint>
     <hint type="destinationlabel">
      <x>184</x>
      <y>36</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>commandLinkButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>cmbSearch</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>250</x>
+     <y>242</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>255</x>
+     <y>280</y>
     </hint>
    </hints>
   </connection>

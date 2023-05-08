@@ -5,12 +5,7 @@ import mysql.connector
 from globals_def import *
 
 def SavePayments(ui):
-	conn = mysql.connector.connect(
-		host = "localhost",
-		user = "root",
-		password = "1234",
-		database = "shurugwi"
-		)
+	conn = databaseConnection()
 	c = conn.cursor()
 
 	Acc = ui.txtAcc.text()
@@ -35,12 +30,7 @@ def SavePayments(ui):
 
 
 def PaysView(ui):
-	conn = mysql.connector.connect(
-		host = "localhost",
-		user = "root",
-		password = "1234",
-		database = "shurugwi"
-		)
+	conn = databaseConnection()
 	c = conn.cursor()
 
 	user=""
@@ -60,12 +50,7 @@ def PaySearch(ui):
 	search = ui.txtPaySearch.text()
 	
 	ui.pays_table.setRowCount(0)
-	conn = mysql.connector.connect(
-		host = "localhost",
-		user = "root",
-		password = "1234",
-		database = "shurugwi"
-		)
+	conn = databaseConnection()
 	c = conn.cursor()
 	query = "SELECT * FROM pays WHERE AccountNumber = '%s'" % (search)
 	c.execute(query)

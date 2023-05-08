@@ -4,12 +4,7 @@ import mysql.connector
  
 from globals_def import *
 def SaveBill(ui):
-	conn = mysql.connector.connect(
-		host = "localhost",
-		user = "root",
-		password = "1234",
-		database = "shurugwi"
-		)
+	conn = databaseConnection()
 	c = conn.cursor()
 
 	Meter = ui.txtMeter.text()
@@ -32,12 +27,7 @@ def SaveBill(ui):
 
 
 def BillsView(ui):
-	conn = mysql.connector.connect(
-		host = "localhost",
-		user = "root",
-		password = "1234",
-		database = "shurugwi"
-		)
+	conn = databaseConnection()
 	c = conn.cursor()
 
 	user=""
@@ -59,12 +49,7 @@ def AccBillSearch(ui):
 	search = ui.txtBillSearch.text()
 	name = "Munashe"
 	ui.bills_table.setRowCount(0)
-	conn = mysql.connector.connect(
-		host = "localhost",
-		user = "root",
-		password = "1234",
-		database = "shurugwi"
-		)
+	conn = databaseConnection()
 	c = conn.cursor()
 	query = "SELECT * FROM bills WHERE AccountNumber = '%s'" % (search)
 	c.execute(query)

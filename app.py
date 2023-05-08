@@ -28,12 +28,7 @@ class Login(QDialog):
 			self.lblError.setText("Input All Fields Data")
 		else:
 			
-			conn = mysql.connector.connect(
-				host = "localhost",
-				user = "root",
-				password = "1234",
-				database = "shurugwi"
-				)
+			conn = databaseConnection()
 			c = conn.cursor()
 			query = "SELECT Password FROM auth WHERE Username = '%s' " % (user)
 			c.execute(query)

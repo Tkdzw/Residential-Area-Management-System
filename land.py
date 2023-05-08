@@ -8,12 +8,7 @@ from PyQt5 import QtWidgets,QtCore
 from globals_def import*
 
 def SaveNLand(ui):
-	conn = mysql.connector.connect(
-		host = "localhost",
-		user = "root",
-		password = "1234",
-		database = "shurugwi"
-		)
+	conn = databaseConnection()
 	c = conn.cursor()
 
 	S_Num = ui.txtSnum.text()
@@ -37,12 +32,7 @@ def SaveNLand(ui):
 		Error_Message(e)
 
 def loadland(ui):
-	conn = mysql.connector.connect(
-		host = "localhost",
-		user = "root",
-		password = "1234",
-		database = "shurugwi"
-		)
+	conn = databaseConnection()
 	c = conn.cursor()
 	user=""
 	query = "SELECT * FROM land" 
@@ -63,12 +53,7 @@ def LandSearch(ui):
 	search = ui.txtLandSearch.text()
 
 	ui.land_table.setRowCount(0)
-	conn = mysql.connector.connect(
-		host = "localhost",
-		user = "root",
-		password = "1234",
-		database = "shurugwi"
-		)
+	conn = databaseConnection()
 	c = conn.cursor()
 	query = "SELECT * FROM land WHERE StandNumber = '%s' OR LandLocation = '%s' "% (search,search)
 	c.execute(query)

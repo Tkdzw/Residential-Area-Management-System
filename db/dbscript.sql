@@ -1,6 +1,6 @@
 #State Database Name and Select It
-CREATE SCHEMA `Database_Name` ;
-USE `Database_Name`;
+CREATE SCHEMA `lupane` ;
+USE `lupane`;
 
 ##############################################################
 #Tables
@@ -157,3 +157,10 @@ VIEW `pays` AS
 	#Database Sample Data
     
     INSERT INTO `auth` (`ID`, `Username`, `Password`) VALUES ('1111', 'Tkdzw', '1111');
+
+CREATE SCHEMA IF NOT EXISTS `councils` ;
+
+CREATE TABLE `councils`.`connectdb` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `Council` VARCHAR(45) NULL,
+  PRIMARY KEY (`ID`));
